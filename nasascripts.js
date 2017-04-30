@@ -1,3 +1,15 @@
+msg.tweet = {
+    place : {
+        full_name : 'London, England'
+    },
+    text : "please help me #forestfire stuff",
+}
+    
+msg.topic = "tweets/landon87314923";
+
+return msg;
+
+
 var lat = 0;
 var long = 0;
 var topic = '';
