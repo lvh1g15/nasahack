@@ -90,4 +90,30 @@ msg.preparing = {
     return msg;
 }
 
+msg.preparing = msg.preparing[msg.preparing.length-1];
+var something = msg.preparing.tweet;
+var watsonResponse = msg.payload.output.text;
+
+var topics = msg.topic
+var twitterHandle = '@' + topics.replace('tweets/','');
+
+msg.preparing = something;
+msg.payload = watsonResponse;
+
+msg.params = {
+    username: twitterHandle,
+    message: something,
+    watsonResponse: watsonResponse,
+}
+
+msg.payload = msg.params.username + ' ' + msg.params.message + ' ' + msg.params.watsonResponse;
+
+
+return msg;
+
+
+
+
+
+
 
