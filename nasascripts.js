@@ -120,8 +120,14 @@ msg.params = {
 
 msg.payload = msg.params.username + ' ' + msg.params.message + ' ' + msg.params.watsonResponse;
 
-
 return msg;
+
+
+for(var i=0; i<msg.preparing.length; i++){
+    node.send({
+        payload : msg.preparing[i],
+    });
+}
 
 
 
